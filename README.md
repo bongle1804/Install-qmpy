@@ -24,5 +24,15 @@ Step 1: Download and install MySQL, remember name and password (for example: nam
 Step 2: Setting MySQL:
   mysql -u root -p
   # After enter, you will required password: pass
+  
+Step 3: Create a new database, for example, 'hehe':
+  CREATE DATABASE hehe;
 
-(Continue)
+Step 4: Import data (file .sql) into database:
+  mysql -u root -p hehe < data.sql
+  # After enter, you will required password: pass
+  # Wait for importing, time depends on size of dataset. 30G~2h.
+
+Step 5: Setting in qmpy. You need to setting in qmpy/db/settings.py; name, user, host need to match with mysql
+Done 
+
